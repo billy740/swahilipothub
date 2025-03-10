@@ -29,7 +29,7 @@ const routes = [
     label: "Adverts",
   },
   {
-    href: "/spfm",
+    href: "/sphfm",
     label: "SwahilipotFM",
   },
   {
@@ -47,9 +47,9 @@ const routes = [
     href: "/aboutsph",
     label: "About Us",
     subRoutes: [
-      { href: "/aboutsph/aboutus", label: "About Swahilipot hub" },
-      { href: "/aboutsph/origin", label: "Our Origin Story" },
-      { href: "/aboutsph/contactus", label: "Contact Us" },
+      { href: "/about/aboutus", label: "About Swahilipot hub" },
+      { href: "/about/origin", label: "Our Origin Story" },
+      { href: "/about/contact", label: "Contact Us" },
     ],
   },
   {
