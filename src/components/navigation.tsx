@@ -14,7 +14,7 @@ import { Menu, ChevronDown } from "lucide-react";
 
 const routes = [
   {
-    href: "/programs",
+    href: "/#",
     label: "Programs",
     subRoutes: [
       { href: "/programs/case-management", label: "Case Management" },
@@ -33,7 +33,7 @@ const routes = [
     label: "SwahilipotFM",
   },
   {
-    href: "/departments",
+    href: "/#",
     label: "Departments",
     subRoutes: [
       { href: "/departments/communications", label: "Communications" },
@@ -44,7 +44,7 @@ const routes = [
     ],
   },
   {
-    href: "/aboutsph",
+    href: "/#",
     label: "About Us",
     subRoutes: [
       { href: "/about/aboutus", label: "About Swahilipot hub" },
