@@ -77,49 +77,81 @@ export const Navigation = () => {
 
   if (isMobile) {
     return (
-      <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger>
-          <Button
-            variant="outline"
-            size="sm"
-            className="font-normal bg-white/10 hover:bg-white/20 hover:text-white border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-white focus:bg-white/30 transition"
-          >
-            <Menu className="size-4" />
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left" className="px-2">
-          <nav className="flex flex-col gap-y-2 pt-6">
-            {routes.map((route) => (
-              <div key={route.href}>
-                <Button
-                  variant={route.href === pathname ? "secondary" : "ghost"}
-                  onClick={() => onClick(route.href)}
-                  className="w-full justify-start"
-                >
-                  {route.label}
-                  {route.subRoutes && <ChevronDown className="ml-2" />}
-                </Button>
-                {route.subRoutes && (
-                  <div className="pl-4 space-y-1">
-                    {route.subRoutes.map((subRoute) => (
-                      <Button
-                        key={subRoute.href}
-                        variant="ghost"
-                        onClick={() => onClick(subRoute.href)}
-                        className="w-full justify-start text-sm"
-                      >
-                        {subRoute.label}
-                      </Button>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-        </SheetContent>
-      </Sheet>
+      <div className="flex items-center justify-between w-full px-4 py-2 bg-white shadow-md">
+        {/* LOGO - Takes most of the space */}
+        <img src="/sphlogo.png" alt="Logo" className="h-10 flex-grow max-w-[60%]" />
+  
+        {/* MENU ICON */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger>
+            <Button
+              variant="outline"
+              size="sm"
+              className="font-normal bg-white/10 hover:bg-white/20 hover:text-blue-500 border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-dark focus:bg-white/30 transition"
+            >
+              <Menu className="size-5" />
+            </Button>
+          </SheetTrigger>
+  
+          <SheetContent side="left" className="px-2">
+            {/* LOGO INSIDE SIDEBAR */}
+            <div className="flex items-center justify-between py-4 px-4 border-b">
+              <img src="/sphlogo.png" alt="Logo" className="h-8" />
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsOpen(false)}
+                className="text-gray-500"
+              />
+            </div>
+  
+            {/* NAVIGATION */}
+            <nav className="flex flex-col gap-y-2 pt-4">
+              {routes.map((route) => (
+                <div key={route.href}>
+                  <Button
+                    variant={route.href === pathname ? "secondary" : "ghost"}
+                    onClick={() => {
+                      if (route.subRoutes) {
+                        setDropdownOpen(dropdownOpen === route.label ? null : route.label);
+                      } else {
+                        onClick(route.href);
+                      }
+                    }}
+                    className="w-full justify-between"
+                  >
+                    {route.label}
+                    {route.subRoutes && (
+                      <ChevronDown
+                        className={`ml-2 transition-transform ${
+                          dropdownOpen === route.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    )}
+                  </Button>
+                  {route.subRoutes && dropdownOpen === route.label && (
+                    <div className="pl-4 space-y-1">
+                      {route.subRoutes.map((subRoute) => (
+                        <Button
+                          key={subRoute.href}
+                          variant="ghost"
+                          onClick={() => onClick(subRoute.href)}
+                          className="w-full justify-start text-sm"
+                        >
+                          {subRoute.label}
+                        </Button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
     );
   }
+  
 
   return (
     <nav className="hidden lg:flex items-center gap-x-4">

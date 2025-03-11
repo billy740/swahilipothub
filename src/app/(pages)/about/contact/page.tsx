@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           {/* Heading */}
           <div className="w-lg-50 mb-5 mb-sm-10">
             <h1 className="display-3 text-primary">
-              Let's <span className="text-warning">talk</span>
+              Let&apos;s <span className="text-warning">talk</span>
             </h1>
             <p className="lead">
               Got a question? Want to learn more about us? Get in touch.
