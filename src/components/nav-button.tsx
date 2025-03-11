@@ -13,6 +13,9 @@ export const NavButton = ({
     label,
     isActive,
 }: Props) => {
+    // Check if the link is external
+    const isExternal = href.startsWith("http");
+
     return (
         <Button
           asChild
@@ -23,9 +26,17 @@ export const NavButton = ({
             isActive ? "bg-white/10 text-blue-500": "bg-transparent",
           )}
         >
-            <Link href={href}>
-              {label}
-            </Link>
+            {isExternal ? (
+                // Open external links in a new tab
+                <a href={href} target="_blank" rel="noopener noreferrer">
+                    {label}
+                </a>
+            ) : (
+                // Internal links stay the same
+                <Link href={href}>
+                    {label}
+                </Link>
+            )}
         </Button> 
     );
 };
