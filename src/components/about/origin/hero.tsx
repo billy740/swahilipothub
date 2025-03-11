@@ -23,22 +23,13 @@ const Hero: React.FC = () => {
                 className="position-absolute"
                 style={{ top: "-6rem", left: "-6rem" }}
               >
-                <img
-                  src="/assets/svg/components/shape-1-soft-light.svg"
-                  alt="SVG"
-                  width={500}
-                  style={{ width: "12rem" }}
-                />
+               
               </div>
               <div
                 className="position-absolute"
                 style={{ bottom: "-12rem", right: "-7rem" }}
               >
-                <img
-                  src="/assets/svg/components/shape-7-soft-light.svg"
-                  alt="SVG"
-                  width={250}
-                />
+                
               </div>
               {/* End Background Shapes */}
             </div>

@@ -7,7 +7,7 @@ const OriginStory: React.FC = () => {
     <>
       <Hero />
       <Origin />
-      <div className="border-top mx-auto" style={{ maxWidth: "25rem" }} />
+      <div className="border-t border-gray-300 mx-auto my-12" style={{ maxWidth: "25rem" }} />
     </>
   );
 };
