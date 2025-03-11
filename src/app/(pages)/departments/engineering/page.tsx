@@ -60,7 +60,7 @@ const EngineeringPage = () => {
         <h2 className="text-4xl font-bold text-blue-600">About Us</h2>
         <p className="text-xl text-gray-700 mt-4 max-w-4xl mx-auto">
           We are the Engineering Team under the Technology Department at Swahilipot Hub Foundation, 
-          dedicated to developing and maintaining the organization's platforms as well as managing 
+          dedicated to developing and maintaining the organization&apos;s platforms as well as managing 
           and configuring the network infrastructure.
         </p>
       </section>

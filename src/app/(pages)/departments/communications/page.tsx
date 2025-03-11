@@ -26,7 +26,7 @@ const Communications = () => {
           <h2 className="text-4xl font-bold text-blue-700">Creating an Inclusive Community</h2>
           <p className="text-lg text-gray-700 mt-4 leading-relaxed">
             Welcome to the Community Department at Swahilipot Hub! We are thrilled to have you join our vibrant community. 
-            Here, we believe in minding other people's business in the best way possible - by enabling community members to develop themselves 
+            Here, we believe in minding other people&apos;s business in the best way possible - by enabling community members to develop themselves 
             and create an environment where talents can thrive and expertise can be shared.
           </p>
         </div>

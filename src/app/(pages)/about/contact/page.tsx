@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
         {contactItems.map((item, index) => (
           <div key={index} className="bg-white p-6 rounded-lg shadow-md">
             <img className="h-10 w-10 mb-4" src={item.imgSrc} alt={item.title} />
-            <h3 className="text-lg font-semibold">{item.title}</h3>
+            <h2 className="text-lg font-semibold">{item.title}</h2>
             <p className="text-sm text-gray-600">{item.description}</p>
             <a href={item.email} className="text-primary font-medium mt-2 inline-block">
               {item.linkText} →
@@ -51,7 +51,7 @@ const ContactDetails: React.FC = () => {
         ))}
       </div>
       <div className="mt-6">
-        <h3 className="font-semibold">Contact Partnerships by Email</h3>
+        <h2 className="text-xl font-semibold">Contact Partnerships by Email</h2>
         <p className="text-gray-700">
           If you wish to write us an email instead, please use{" "}
           <a href="mailto:partnership@swahilipothub.co.ke" className="text-blue-600">
@@ -67,7 +67,7 @@ const PartnersSection: React.FC = () => {
   return (
     <div className="py-12 bg-gray-100">
       <div className="container mx-auto px-6 md:px-12 text-center">
-        <h3 className="text-2xl font-bold">Partners</h3>
+        <h2 className="text-2xl font-bold">Partners</h2>
         <div className="mt-6 flex justify-center">
           <img
             src="/path-to-gdi-logo.png"
