@@ -57,7 +57,7 @@ const routes = [
     label: "Join Youth Database",
   },
   {
-    href: "/blogs",
+    href: "https://medium.com/@swahilipotengineering",
     label: "Blogs and News",
   },
 ];
