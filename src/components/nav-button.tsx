@@ -23,7 +23,7 @@ export const NavButton = ({
           variant="outline"
           className={cn(
             "w-full lg:w-auto justify-between font-normal hover:bg-white/20 hover:text-blue-500 border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-dark focus:bg-white/30 transition",
-            isActive ? "bg-white/10 text-dark": "bg-transparent",
+            isActive ? "bg-white/10 text-blue-500": "bg-transparent",
           )}
         >
             {isExternal ? (

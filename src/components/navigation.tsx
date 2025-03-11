@@ -168,13 +168,13 @@ export const Navigation = () => {
             isActive={pathname === route.href}
           />
           {route.subRoutes && dropdownOpen === route.label && (
-            <div className="absolute bg-black text-white rounded-md shadow-lg py-2 w-auto min-w-[200px] z-10">
+            <div className="absolute bg-white text-gray-500 rounded-md shadow-lg py-2 w-auto min-w-[200px] z-10">
               {route.subRoutes.map((subRoute) => (
                 <Button
                   key={subRoute.href}
                   variant="ghost"
                   onClick={() => onClick(subRoute.href)}
-                  className="w-full justify-start text-left text-sm px-4 py-2 hover:bg-white/10 whitespace-nowrap"
+                  className="w-full justify-start text-left text-sm px-4 py-2 hover:bg-gray-200 whitespace-nowrap"
                 >
                   {subRoute.label}
                 </Button>
