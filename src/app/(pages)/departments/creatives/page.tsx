@@ -30,7 +30,7 @@ const CreativesDepartment = () => {
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-lg">
         <h1 className="text-6xl font-extrabold drop-shadow-lg">Creatives Department</h1>
-        <p className="text-xl mt-2 opacity-90">Ubunifu Unaong'ara, Sanaa Inabadilisha Dunia</p>
+        <p className="text-xl mt-2 opacity-90">Ubunifu Unaong&apos;ara, Sanaa Inabadilisha Dunia</p>
       </section>
 
 
