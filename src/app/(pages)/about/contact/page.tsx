@@ -1,100 +1,86 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 const Contact: React.FC = () => {
   return (
-    <>
-      <Hero />
-      <ContactInfo />
-    </>
-  );
-};
-
-const Hero: React.FC = () => {
-  return (
-    <div className="shape-container bg-soft-warning">
-      <div className="position-relative zi-2">
-        <div className="container content-space-1 content-space-md-3">
-          {/* Heading */}
-          <div className="w-lg-50 mb-5 mb-sm-10">
-            <h1 className="display-3 text-primary">
-              Let&apos;s <span className="text-warning">talk</span>
-            </h1>
-            <p className="lead">
-              Got a question? Want to learn more about us? Get in touch.
-            </p>
-          </div>
-          {/* End Heading */}
-          <div className="row">
-            {contactItems.map((item, index) => (
-              <div key={index} className="col-md-4 mb-5 mb-md-0">
-                <div className="me-md-6">
-                  <img className="svg-icon text-primary mb-3" src={item.imgSrc} />
-                  <h5>{item.title}</h5>
-                  <p>{item.description}</p>
-                  <a href={item.email}>
-                    {item.linkText} <i className="bi-chevron-right small ms-1" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      {/* Shape */}
-      <div className="shape shape-bottom zi-1">
-        <svg width={3000} height={600} viewBox="0 0 3000 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 600H3000V0L0 600Z" fill="#fff" />
-        </svg>
-      </div>
-      {/* End Shape */}
+    <div className="bg-[#fdf7ee] min-h-screen">
+      <HeroSection />
+      <ContactDetails />
+      <PartnersSection />
     </div>
   );
 };
 
-const ContactInfo: React.FC = () => {
+const HeroSection: React.FC = () => {
   return (
-    <div className="container content-space-1 content-space-b-md-3">
-      {/* Heading */}
-      <div className="w-lg-65 mb-7">
-        <h3>Contact Us</h3>
-        <p>Discuss your interests with us.</p>
+    <div className="py-16 px-6 md:px-12 bg-soft-warning">
+      <div className="max-w-3xl mx-auto text-center">
+        <h1 className="text-4xl font-bold text-primary">
+          Let's <span className="text-warning">talk</span>
+        </h1>
+        <p className="text-lg mt-3 text-gray-700">
+          Got a question? Want to learn more about us? Get in touch.
+        </p>
       </div>
-      {/* End Heading */}
-      <div className="row justify-content-md-between">
-        <div className="">
-          <div className="mb-4">
-            <h6>Contact Partnerships</h6>
+      <div className="mt-12 grid gap-8 md:grid-cols-3">
+        {contactItems.map((item, index) => (
+          <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+            <img className="h-10 w-10 mb-4" src={item.imgSrc} alt={item.title} />
+            <h2 className="text-lg font-semibold">{item.title}</h2>
+            <p className="text-sm text-gray-600">{item.description}</p>
+            <a href={item.email} className="text-primary font-medium mt-2 inline-block">
+              {item.linkText} →
+            </a>
           </div>
-          <ul className="list-unstyled list-py-1">
-            {contactDetails.map((detail, index) => (
-              <li key={index}>
-                <div className="d-flex align-items-center">
-                  <div className="flex-shrink-0 text-center" style={{ width: "1.5rem" }}>
-                    <img className="avatar avatar-xss avatar-circle" src={detail.imgSrc} alt="Icon" />
-                  </div>
-                  <div className="flex-grow-1 ms-2">
-                    <span>{detail.text}</span>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <hr className="my-5" />
-          <div className="mt-5">
-            <h6>Contact Partnerships by Emails</h6>
-            <p>
-              If you wish to write us an email instead please use{" "}
-              <a href="mailto:partnership@swahilipothub.co.ke">partnership@swahilipothub.co.ke</a>
-            </p>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const ContactDetails: React.FC = () => {
+  return (
+    <div className="container mx-auto px-6 md:px-12 py-12">
+      <h2 className="text-2xl font-bold">Contact Us</h2>
+      <p className="text-gray-700">Discuss your interests with us.</p>
+      <div className="mt-6 space-y-6">
+        {contactDetails.map((detail, index) => (
+          <div key={index} className="flex items-center">
+            <img className="h-6 w-6 mr-3" src={detail.imgSrc} alt="Icon" />
+            <span className="text-gray-800">{detail.text}</span>
           </div>
+        ))}
+      </div>
+      <div className="mt-6">
+        <h2 className="text-xl font-semibold">Contact Partnerships by Email</h2>
+        <p className="text-gray-700">
+          If you wish to write us an email instead, please use{" "}
+          <a href="mailto:partnership@swahilipothub.co.ke" className="text-blue-600">
+            partnership@swahilipothub.co.ke
+          </a>
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const PartnersSection: React.FC = () => {
+  return (
+    <div className="py-12 bg-gray-100">
+      <div className="container mx-auto px-6 md:px-12 text-center">
+        <h2 className="text-2xl font-bold">Partners</h2>
+        <div className="mt-6 flex justify-center">
+          <img
+            src="/path-to-gdi-logo.png"
+            alt="Global Development Incubator"
+            className="h-20"
+          />
         </div>
       </div>
     </div>
   );
 };
 
+// Contact Data
 const contactItems = [
   {
     imgSrc: "./assets/vendor/duotone-icons/com/com006.svg",
