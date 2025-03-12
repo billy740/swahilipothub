@@ -24,7 +24,7 @@ export default function JoinYouth() {
         {/* Left Side - Image */}
         <div className="flex-1">
           <Image
-            src="/image." // Changed the image filename slightly
+            src="/youth.jpg" // Changed the image filename slightly
             alt="Innovative Youth Community"
             width={550}
             height={380}
