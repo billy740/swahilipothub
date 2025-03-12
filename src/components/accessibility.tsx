@@ -19,21 +19,22 @@ const AccessibilityToolbar = () => {
   };
 
   const startListening = () => {
-    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
     recognition.lang = "en-US";
-    recognition.onresult = (event) => {
+    recognition.onresult = (event: { results: { transcript: any; }[][]; }) => {
       alert(`You said: ${event.results[0][0].transcript}`);
     };
     recognition.start();
   };
 
-  const changeTextSize = (delta) => {
+  const changeTextSize = (delta: number) => {
     const body = document.body;
     const currentSize = parseFloat(window.getComputedStyle(body).fontSize);
     body.style.fontSize = `${currentSize + delta}px`;
   };
 
-  const changeTextSpacing = (delta) => {
+  const changeTextSpacing = (delta: number) => {
     const body = document.body;
     const currentSpacing = parseFloat(window.getComputedStyle(body).letterSpacing) || 0;
     body.style.letterSpacing = `${currentSpacing + delta}px`;
