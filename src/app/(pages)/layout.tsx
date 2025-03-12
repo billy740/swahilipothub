@@ -1,3 +1,4 @@
+import AccessibilityToolbar from "@/components/accessibility";
 import Footer from "@/components/footer";
 import { Header } from "@/components/header";
 import Partners from "@/components/partners";
@@ -15,6 +16,7 @@ const DashboardLayout = ({ children } :Props) => {
         </main>
         <Partners />
         <Footer />
+        <AccessibilityToolbar />
         </>
     );
 };
