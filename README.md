@@ -18,7 +18,7 @@
 
 ## <a name="introduction">🤖 Introduction</a>
 
-Introducing swahilipot hub website a seamless blend of technology, innovation and creatives.
+Introducing Swahilipot Hub’s replica website – a seamless blend of technology, creativity, and innovation. This platform not only highlights the vibrant community and projects at Swahilipot Hub but also serves as a gateway for like-minded individuals to connect, collaborate, and grow. With a modern, intuitive design and engaging content, this site is the perfect space to explore the future of tech and creativity in Kenya.
 
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
@@ -31,9 +31,8 @@ Introducing swahilipot hub website a seamless blend of technology, innovation an
 ## <a name="features">🔋 Features</a>
 
 👉 **Responsive Design**: Works seamlessly on various devices.
-👉 **Accessibility feature**: Featuring text to speech, voice commands etc.
 
-and many more, including code architecture and reusability
+👉 **Accessibility feature**: The website is designed with accessibility in mind, featuring text-to-speech, customizable text size and spacing, invert color modes, and voice commands, ensuring an inclusive experience for all users.
 
 ## <a name="quick-start">🤸 Quick Start</a>
 

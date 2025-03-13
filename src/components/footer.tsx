@@ -3,6 +3,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const year = new Date().getFullYear()
@@ -30,21 +31,21 @@ const Footer = () => {
 
           {/* About Swahilipot */}
           <div>
-            <h5 className="text-lg font-semibold text-white mb-4">About Swahilipot</h5>
+            <h5 className="text-lg font-semibold text-white mb-4">About Us</h5>
             <ul className="space-y-2">
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition">
-                  Contact us
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition">
-                  About us
+                <Link href="/about/aboutus" className="text-gray-400 hover:text-white transition">
+                  About Swahilipot hub
                 </Link>
               </li>
               <li>
                 <Link href="/about/origin" className="text-gray-400 hover:text-white transition">
                   Our Origin Story
+                </Link>
+              </li>
+              <li>
+                <Link href="/about/contact" className="text-gray-400 hover:text-white transition">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -118,23 +119,14 @@ const Footer = () => {
             © Swahilipot Hub Foundation. {year}. Mombasa, Kenya.
           </p>
           <div className="flex space-x-4">
-            <a
-              href="https://www.facebook.com/Swahilipothub/"
-              className="text-gray-400 hover:text-white transition"
-            >
-              <i className="bi-facebook text-xl"></i>
+            <a href="https://www.facebook.com/Swahilipothub/" className="text-gray-400 hover:text-white transition">
+               <FaFacebook className="text-xl" />
             </a>
-            <a
-              href="https://twitter.com/swahilipothub"
-              className="text-gray-400 hover:text-white transition"
-            >
-              <i className="bi-twitter text-xl"></i>
+            <a href="https://twitter.com/swahilipothub" className="text-gray-400 hover:text-white transition">
+              <FaTwitter className="text-xl" />
             </a>
-            <a
-              href="https://www.linkedin.com/company/swahilipot-hub"
-              className="text-gray-400 hover:text-white transition"
-            >
-              <i className="bi-linkedin text-xl"></i>
+            <a href="https://www.linkedin.com/company/swahilipot-hub" className="text-gray-400 hover:text-white transition">
+              <FaLinkedin className="text-xl" />
             </a>
           </div>
         </div>
