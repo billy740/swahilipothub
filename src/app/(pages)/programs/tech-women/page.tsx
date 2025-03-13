@@ -23,7 +23,7 @@ export default function SwahiliTechWomen() {
               Join Us
             </a>
             <a
-              href="/support"
+              href="/stwdonate/support-stw"
               className="border border-purple-600 hover:bg-purple-600 hover:text-white text-purple-700 font-semibold text-lg py-3 px-6 rounded-lg transition-all shadow-lg transform hover:scale-105"
             >
               Support Us
