@@ -66,8 +66,9 @@ const AccessibilityToolbar = () => {
 
   return (
     <div className="fixed bottom-4 left-4 z-50">
-      <Button onClick={toggleToolbar} className="p-3 rounded-full shadow-lg">
-        <FaUniversalAccess size={24} />
+      <Button onClick={toggleToolbar}  className="p-4 w-16 h-16 rounded-full shadow-lg flex items-center justify-center bg-blue-600 text-white hover:bg-blue-700"
+    >
+        <FaUniversalAccess size={32} />
       </Button>
 
       <AnimatePresence>
