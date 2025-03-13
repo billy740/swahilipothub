@@ -58,9 +58,6 @@ const CaseManagement = () => {
           <button type="submit" className="bg-blue-700 text-white py-3 rounded-lg font-bold hover:bg-blue-800">Submit</button>
         </form>
       </section>
-
-      {/* Footer */}
-      <footer className="text-center py-6 text-gray-600">© {new Date().getFullYear()} Swahili Pot Hub. All rights reserved.</footer>
     </div>
   );
 };

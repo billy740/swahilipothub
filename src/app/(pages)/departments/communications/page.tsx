@@ -109,9 +109,6 @@ const Communications = () => {
           </button>
         </form>
       </section>
-
-      {/* Footer */}
-      <footer className="text-center py-6 text-gray-600 mt-10">© {new Date().getFullYear()} Swahili Pot Hub. All rights reserved.</footer>
     </div>
   );
 };
