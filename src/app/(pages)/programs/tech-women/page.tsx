@@ -17,7 +17,7 @@ export default function SwahiliTechWomen() {
           </p>
           <div className="mt-6 flex justify-center md:justify-start space-x-4">
             <a
-              href="/join"
+              href="/stwdonate/membership"
               className="bg-purple-600 hover:bg-purple-700 text-white font-semibold text-lg py-3 px-6 rounded-lg transition-all shadow-lg transform hover:scale-105"
             >
               Join Us
