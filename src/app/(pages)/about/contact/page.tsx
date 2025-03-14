@@ -5,7 +5,6 @@ const Contact: React.FC = () => {
     <div className="bg-[#fdf7ee] min-h-screen">
       <HeroSection />
       <ContactDetails />
-      <PartnersSection />
     </div>
   );
 };
@@ -63,41 +62,24 @@ const ContactDetails: React.FC = () => {
   );
 };
 
-const PartnersSection: React.FC = () => {
-  return (
-    <div className="py-12 bg-gray-100">
-      <div className="container mx-auto px-6 md:px-12 text-center">
-        <h2 className="text-2xl font-bold">Partners</h2>
-        <div className="mt-6 flex justify-center">
-          <img
-            src="/path-to-gdi-logo.png"
-            alt="Global Development Incubator"
-            className="h-20"
-          />
-        </div>
-      </div>
-    </div>
-  );
-};
-
 // Contact Data
 const contactItems = [
   {
-    imgSrc: "./assets/vendor/duotone-icons/com/com006.svg",
+    imgSrc: "/com006.svg",
     title: "Our Activities",
     description: "Get help understanding what we do on a daily basis",
     email: "mailto:info@swahilipothub.co.ke",
     linkText: "Get in touch",
   },
   {
-    imgSrc: "./assets/vendor/duotone-icons/com/com007.svg",
+    imgSrc: "/com007.svg",
     title: "Our Space",
     description: "Learn about our spaces and how they can help you organize a better event",
     email: "mailto:info@swahilipothub.co.ke",
     linkText: "Get help",
   },
   {
-    imgSrc: "./assets/vendor/duotone-icons/fin/fin006.svg",
+    imgSrc: "/fin006.svg",
     title: "Partnerships",
     description: "Let's team up to boost productivity and accelerate business growth",
     email: "mailto:partnership@swahilipothub.co.ke",
@@ -107,15 +89,15 @@ const contactItems = [
 
 const contactDetails = [
   {
-    imgSrc: "./node_modules/flag-icon-css/flags/1x1/gb.svg",
+    imgSrc: "/gb.svg",
     text: "Mombasa, Kenya",
   },
   {
-    imgSrc: "./assets/vendor/duotone-icons/gen/gen018.svg",
+    imgSrc: "/gen018.svg",
     text: "Swahilipot Hub Foundation, Swahili Cultural Center",
   },
   {
-    imgSrc: "./assets/vendor/duotone-icons/elc/elc002.svg",
+    imgSrc: "/elc002.svg",
     text: "+254 11 4635505",
   },
 ];

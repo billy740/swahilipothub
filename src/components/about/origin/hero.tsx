@@ -10,31 +10,38 @@ const Hero: React.FC = () => {
           <div className="container content-space-1 content-space-t-md-3 sb-md-4">
             <div className="position-relative w-lg-75 text-center mx-lg-auto">
               <div className="mb-7">
-                <h1 className="text-white">
+                <h1 className="text-white font-bold text-4xl md:text-5xl">
                   Our <span className="text-warning">Origin Story</span>
                 </h1>
-                <p className="lead text-white-70">
+                <p 
+                  className="text-gray-900 text-xl md:text-2xl font-semibold mt-3 tracking-wide text-center"
+                  style={{
+                    textTransform: "uppercase",
+                    letterSpacing: "2px",
+                    margin: "0 auto",
+                    width: "fit-content",
+                    padding: "10px 20px",
+                  }}
+                >
                   Learn how we have grown over the years
                 </p>
               </div>
               {/* End Row */}
+
               {/* Background Shapes */}
               <div
                 className="position-absolute"
                 style={{ top: "-6rem", left: "-6rem" }}
-              >
-               
-              </div>
+              ></div>
               <div
                 className="position-absolute"
                 style={{ bottom: "-12rem", right: "-7rem" }}
-              >
-                
-              </div>
+              ></div>
               {/* End Background Shapes */}
             </div>
           </div>
         </div>
+
         {/* Shape */}
         <div className="shape shape-bottom zi-1">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
