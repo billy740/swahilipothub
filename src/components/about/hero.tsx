@@ -1,7 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 const Hero: React.FC = () => {
+  const youtubeVideoId = "bscypssE8Ms"; // Replace with your video ID
+  const youtubeThumbnail = `https://img.youtube.com/vi/${youtubeVideoId}/hqdefault.jpg`;
+
+
   return (
     <div className="overflow-hidden bg-white">
       <div className="container mx-auto px-4 py-16">
@@ -19,20 +23,21 @@ const Hero: React.FC = () => {
           </p>
         </div>
 
-        {/* Video Section */}
+        {/* ✅ Video Section with YouTube Thumbnail */}
         <div className="relative flex justify-center mt-8">
           <a
-            href="https://www.youtube.com/watch?v=bscypssE8Ms"
+            href={`https://www.youtube.com/watch?v=${youtubeVideoId}`}
             target="_blank"
             rel="noopener noreferrer"
             className="relative group"
           >
+            {/* ✅ Display YouTube Thumbnail */}
             <Image
               className="rounded-lg shadow-lg"
-              src="/images/aboutpage/7.jpeg"
+              src={youtubeThumbnail}
               width={800}
               height={450}
-              alt="Swahilipot Hub Community"
+              alt="Swahilipot Hub Community Video"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 group-hover:bg-opacity-50 transition">
               <div className="bg-white p-4 rounded-full shadow-lg">
@@ -42,7 +47,7 @@ const Hero: React.FC = () => {
           </a>
         </div>
 
-        {/* Button */}
+        {/* ✅ Button */}
         <div className="text-center mt-6">
           <Link href="/about/origin" legacyBehavior>
             <a className="px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition">
@@ -56,4 +61,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
